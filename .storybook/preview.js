@@ -6,4 +6,11 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+  themes: {
+    default: "twitter",
+    list: [
+      { name: "leboncoin", class: "theme-lbc", color: "#00aced" },
+      { name: "ebay-kleinanzeigen", class: "theme-ebay-k", color: "#3b5998" },
+    ],
+  },
+};

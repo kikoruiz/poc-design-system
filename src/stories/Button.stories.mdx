@@ -1,0 +1,53 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { Button } from "./Button";
+
+<Meta
+  title="MDX/Button"
+  component={Button}
+  argTypes={{
+    backgroundColor: { control: "color" },
+    size: { defaultValue: "medium" },
+  }}
+/>
+
+export const Template = (args) => <Button {...args} />;
+
+# Button
+
+Button component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.
+
+## Sandbox
+
+<Canvas>
+  <Story
+    name="Sandbox"
+    args={{
+      primary: true,
+      label: "Button",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Sandbox" />
+
+## Button Variants
+
+<Canvas>
+  <Story name="variants">
+    <Button primary label="Button (primary)" />
+    <Button label="Button (secondary)" />
+  </Story>
+</Canvas>
+
+## Button Sizes
+
+<Canvas>
+  <Story name="sizes">
+    <Button primary size="small" label="Button (small)" />
+    <Button primary size="medium" label="Button (medium)" />
+    <Button primary size="large" label="Button (large)" />
+  </Story>
+</Canvas>
