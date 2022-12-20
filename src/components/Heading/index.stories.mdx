@@ -1,0 +1,34 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { DummyComponent } from ".";
+
+<Meta title="Typography/Heading" component={DummyComponent} />
+
+export const Template = (args) => <DummyComponent {...args} />;
+
+# DummyComponent
+
+DummyComponent component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.
+
+## Sandbox
+
+<Canvas>
+  <Story
+    name="Sandbox"
+    args={{
+      label: "Dummy component",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Sandbox" />
+
+## DummyComponent Variants
+
+<Canvas>
+  <Story name="variants">
+    <DummyComponent label="DummyComponent (primary)" />
+  </Story>
+</Canvas>
