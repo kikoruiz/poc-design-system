@@ -1,3 +1,5 @@
+import { themes } from "../src/themes";
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -8,9 +10,10 @@ export const parameters = {
   },
   themes: {
     default: "twitter",
-    list: [
-      { name: "leboncoin", class: "theme-lbc", color: "#00aced" },
-      { name: "ebay-kleinanzeigen", class: "theme-ebay-k", color: "#3b5998" },
-    ],
+    list: Object.entries(themes).map(([name, themeConfig]) => ({
+      name,
+      class: name,
+      color: themeConfig.colors.primaries.first,
+    })),
   },
 };

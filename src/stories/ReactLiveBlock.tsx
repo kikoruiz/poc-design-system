@@ -11,7 +11,7 @@ interface Props {
 
 export function ReactLiveBlock({ code, editable = true, scope }: Props) {
   const [editorCode, setEditorCode] = useState(code.trim());
-  const { hasCopied, onCopy } = useClipboard(code);
+  const { hasCopied, onCopy } = useClipboard(editorCode);
 
   const onChange = (newCode: string) => setEditorCode(newCode.trim());
   const reset = () => setEditorCode(code);
