@@ -10,7 +10,6 @@
 
 .storybook-button--primary {
   color: white;
-  
   background-color: var(--colors-primaries-second);
 }
 
