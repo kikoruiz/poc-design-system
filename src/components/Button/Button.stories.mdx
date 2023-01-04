@@ -1,54 +1,45 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
-import { ReactLiveBlock } from "@stories/ReactLiveBlock";
+import { CodeSnippet, ReactLiveBlock } from "@stories/ReactLiveBlock";
 
 import { Button } from "./Button";
 
-<Meta
-  title="Forms/Button"
-  component={Button}
-  argTypes={{
-    backgroundColor: { control: "color" },
-    size: { defaultValue: "medium" },
-  }}
-/>
-
-export const Template = (args) => <Button {...args} />;
+<Meta title="Forms/Button" component={Button} />
 
 # Button
 
 ## Import
 
-<ReactLiveBlock
-  code='import { Button } from "@brikke-ui/button";'
-  editable={false}
-/>
+<CodeSnippet code='import { Button } from "@brikke-ui/button";' />
 
 ## Usage
 
-<ReactLiveBlock code="<Button label='Button' />" scope={{ Button }} />
-
 Button component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.
+
+<ReactLiveBlock scope={{ Button }}>
+  <Button label="Button" />
+</ReactLiveBlock>
 
 ## Props
 
 <ArgsTable of={Button} />
 
-## Button Variants
+## Variants
 
-<Canvas>
-  <Story name="variants">
+<Story name="variants">
+  <ReactLiveBlock scope={{ Button }}>
     <Button primary label="Button (primary)" />
     <Button label="Button (secondary)" />
-  </Story>
-</Canvas>
+  </ReactLiveBlock>
+</Story>
 
-## Button Sizes
+## Sizes
 
-<Canvas>
-  <Story name="sizes">
+<Story name="sizes">
+  Three sizes are available
+  <ReactLiveBlock scope={{ Button }}>
     <Button primary size="small" label="Button (small)" />
     <Button primary size="medium" label="Button (medium)" />
     <Button primary size="large" label="Button (large)" />
-  </Story>
-</Canvas>
+  </ReactLiveBlock>
+</Story>
