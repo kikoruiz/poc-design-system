@@ -13,6 +13,10 @@ function objectEntries<T extends Record<string | number, unknown>>(
   return Object.entries(obj) as [keyof T, T[keyof T]][];
 }
 
+function toKebabCase(v: string) {
+  return v.replace(/[A-Z]/g, (e) => `-${e.toLocaleLowerCase()}`);
+}
+
 function toTailwindConfig(theme: Theme): Theme {
   const themeCpy: Theme = JSON.parse(JSON.stringify(theme));
 
@@ -22,7 +26,7 @@ function toTailwindConfig(theme: Theme): Theme {
         const formattedPath = path ? `--${path}-${key}` : `--${key}`;
         flatten(
           value as unknown as Theme,
-          formattedPath.replace(/-{3,}/, "--")
+          toKebabCase(formattedPath.replace(/-{3,}/, "--"))
         );
         return;
       }
@@ -30,7 +34,7 @@ function toTailwindConfig(theme: Theme): Theme {
       /* eslint-disable */
       if (typeof value === "string") {
         /* @ts-ignore */
-        obj[key as any] = `var(${path}-${key})`;
+        obj[key as any] = `var(${path}-${toKebabCase(key)})`;
         /* eslint-enable */
       }
     });

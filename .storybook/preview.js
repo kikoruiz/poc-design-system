@@ -1,5 +1,7 @@
 import { themes } from "../src/themes";
 
+const themeEntries = Object.entries(themes);
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -9,11 +11,11 @@ export const parameters = {
     },
   },
   themes: {
-    default: "twitter",
+    default: themeEntries[0][0],
     list: Object.entries(themes).map(([name, themeConfig]) => ({
       name,
       class: name,
-      color: themeConfig.colors.primaries.first,
+      color: themeConfig.colors.accent,
     })),
   },
 };

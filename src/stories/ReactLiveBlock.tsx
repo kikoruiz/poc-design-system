@@ -50,6 +50,7 @@ export function ReactLiveBlock({
               color: "white",
               margin: 0,
               fontWeight: 700,
+              fontSize: "14px",
             }}
           >
             Editable Example
@@ -67,7 +68,15 @@ export function ReactLiveBlock({
           {code !== editorCode && <button onClick={reset}>Reset code</button>}
           <button onClick={onCopy}>{hasCopied ? "Copied" : "Copy"}</button>
         </div>
-        <LiveEditor disabled={!editable} onChange={onChange} />
+        <LiveEditor
+          disabled={!editable}
+          onChange={onChange}
+          style={
+            {
+              // fontSize: "16px",
+            }
+          }
+        />
       </div>
       {editable && <LiveError />}
     </LiveProvider>
