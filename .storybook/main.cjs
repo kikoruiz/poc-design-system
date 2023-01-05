@@ -31,4 +31,8 @@ module.exports = {
   docs: {
     docsPage: true,
   },
+  typescript: {
+    // enable type checking
+    check: true,
+  },
 };

@@ -19,3 +19,11 @@ export const parameters = {
     })),
   },
 };
+
+export const decorators = [
+  (Story) => (
+    <div style={{ paddingTop: "1rem" }}>
+      <Story />
+    </div>
+  ),
+];
