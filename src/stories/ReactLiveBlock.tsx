@@ -50,7 +50,7 @@ export function ReactLiveBlock({
               color: "white",
               margin: 0,
               fontWeight: 700,
-              fontSize: "14px",
+              fontSize: "1.4rem",
             }}
           >
             Editable Example
@@ -71,11 +71,9 @@ export function ReactLiveBlock({
         <LiveEditor
           disabled={!editable}
           onChange={onChange}
-          style={
-            {
-              // fontSize: "16px",
-            }
-          }
+          style={{
+            fontSize: "1.6rem",
+          }}
         />
       </div>
       {editable && <LiveError />}
