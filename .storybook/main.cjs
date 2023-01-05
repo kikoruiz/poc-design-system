@@ -3,18 +3,6 @@ module.exports = {
   async viteFinal(config, { configType }) {
     return {
       ...config,
-      resolve: {
-        alias: [
-          {
-            find: "@stories",
-            replacement: path.resolve(__dirname, "../src/stories"),
-          },
-          {
-            find: "@components",
-            replacement: path.resolve(__dirname, "../src/components"),
-          },
-        ],
-      },
     };
   },
   stories: ["../src/stories/**/*.mdx", "../src/**/*.stories.@(mdx|ts|tsx)"],

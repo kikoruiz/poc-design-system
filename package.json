@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
+    "start": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "write-themes": "ts-node-esm writeThemes.ts",
     "write-tailwind-conf": "ts-node-esm writeTailwindThemeConf.ts"

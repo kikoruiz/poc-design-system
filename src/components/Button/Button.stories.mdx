@@ -4,6 +4,8 @@ import { CodeSnippet, ReactLiveBlock } from "@stories/ReactLiveBlock";
 
 import { Button } from "./Button";
 
+import * as examples from "./ButtonExamples.stories";
+
 <Meta title="Components/Forms/Button" component={Button} />
 
 # Button
@@ -26,23 +28,8 @@ Button component is used to trigger an action or event, such as submitting a for
 
 ## Variants
 
-<Story name="variants">
-  <ReactLiveBlock scope={{ Button }}>
-    <Button variant="default" label="Default" />
-    <Button variant="warning" label="Warning" />
-    <Button variant="danger" label="Danger" />
-    <Button variant="info" label="Info" />
-    <Button variant="success" label="Success" />
-  </ReactLiveBlock>
-</Story>
+<Story name="variants" story={examples.variants} />
 
 ## Sizes
 
-<Story name="sizes">
-  Three sizes are available
-  <ReactLiveBlock scope={{ Button }}>
-    <Button primary size="small" label="Button (small)" />
-    <Button primary size="medium" label="Button (medium)" />
-    <Button primary size="large" label="Button (large)" />
-  </ReactLiveBlock>
-</Story>
+<Story name="sizes" story={examples.sizes} />
