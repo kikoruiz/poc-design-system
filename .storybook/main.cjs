@@ -18,6 +18,7 @@ module.exports = {
   },
   docs: {
     docsPage: true,
+    autodocs: true,
   },
   typescript: {
     // enable type checking
