@@ -7,11 +7,12 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "start": "storybook dev -p 6006",
+    "start": "npm run write-tailwind-conf && npm run write-themes && npm run storybook",
     "build-storybook": "storybook build",
     "upgrade-storybook": "sb upgrade --prerelease",
+    "storybook": "storybook dev -p 6006",
     "write-themes": "ts-node-esm writeThemes.ts",
-    "write-tailwind-conf": "ts-node-esm writeTailwindThemeConf.ts"
+    "write-tailwind-conf": "ts-node-esm writeTailwindConfig.ts"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -32,6 +33,7 @@
     "autoprefixer": "^10.4.13",
     "class-variance-authority": "^0.4.0",
     "copy-to-clipboard": "^3.3.3",
+    "hex-rgb": "5.0.0",
     "postcss": "^8.4.20",
     "postcss-import": "^15.1.0",
     "postcss-nesting": "^10.2.0",
