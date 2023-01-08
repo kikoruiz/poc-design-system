@@ -17,7 +17,30 @@ function toKebabCase(v: string) {
   return v.replace(/[A-Z]/g, (e) => `-${e.toLocaleLowerCase()}`);
 }
 
-function toTailwindConfig(theme: Theme): Theme {
+function isHex(str: string) {
+  const regexp = /^#[0-9a-fA-F]+$/;
+
+  return regexp.test(str);
+}
+
+function toKebabCaseKeys<T extends Object>(
+  obj: T,
+  level = 1
+): Record<string, T[keyof T]> {
+  const result: any = {};
+  for (const key in obj) {
+    const value =
+      typeof obj[key] === "object"
+        ? toKebabCaseKeys(obj[key] as T, level + 1)
+        : obj[key];
+    result[
+      level > 1 ? key.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase() : key
+    ] = value;
+  }
+  return result;
+}
+
+function toTailwindConfig(theme: Theme): Record<string, Theme[keyof Theme]> {
   const themeCpy: Theme = JSON.parse(JSON.stringify(theme));
 
   function flatten(obj: Theme, path?: string) {
@@ -33,8 +56,13 @@ function toTailwindConfig(theme: Theme): Theme {
 
       /* eslint-disable */
       if (typeof value === "string") {
+        const formattedPath =
+          /--colors/.test(path || "") && isHex(value)
+            ? `rgb(var(${path}-${toKebabCase(key)}) / <alpha-value>)`
+            : `var(${path}-${toKebabCase(key)})`;
+
         /* @ts-ignore */
-        obj[key as any] = `var(${path}-${toKebabCase(key)})`;
+        obj[key as any] = formattedPath;
         /* eslint-enable */
       }
     });
@@ -42,7 +70,7 @@ function toTailwindConfig(theme: Theme): Theme {
 
   flatten(themeCpy);
 
-  return themeCpy;
+  return toKebabCaseKeys(themeCpy);
 }
 
 function syncWriteFile(filename: string, data: string) {
@@ -52,6 +80,6 @@ function syncWriteFile(filename: string, data: string) {
 }
 
 syncWriteFile(
-  "./tailwind.theme.conf.js",
+  "./tailwind.theme.conf.cjs",
   `module.exports = ${JSON.stringify(toTailwindConfig(themes.default))} `
 );

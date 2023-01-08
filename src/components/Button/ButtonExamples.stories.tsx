@@ -1,20 +1,22 @@
 import { Button } from "./Button";
 import { ReactLiveBlock } from "@stories/ReactLiveBlock";
+import { Stack } from "@components/Stack";
 
 export const variants = () => (
-  <ReactLiveBlock scope={{ Button }}>
-    <Button variant="default" label="Default" />
-    <Button variant="warning" label="Warning" />
-    <Button variant="danger" label="Danger" />
-    <Button variant="info" label="Info" />
-    <Button variant="success" label="Success" />
+  <ReactLiveBlock scope={{ Button, Stack }}>
+    <Stack alignItems="end">
+      <Button intent="primary">primary button</Button>
+      <Button intent="secondary">secondary button</Button>
+    </Stack>
   </ReactLiveBlock>
 );
 
 export const sizes = () => (
-  <ReactLiveBlock scope={{ Button }}>
-    <Button size="small" label="Button (small)" />
-    <Button size="medium" label="Button (medium)" />
-    <Button size="large" label="Button (large)" />
+  <ReactLiveBlock scope={{ Button, Stack }}>
+    <Stack alignItems="end">
+      <Button size="small">small button</Button>
+      <Button size="medium">medium button</Button>
+      <Button size="large">large button</Button>
+    </Stack>
   </ReactLiveBlock>
 );
