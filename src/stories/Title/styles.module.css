@@ -1,9 +1,9 @@
-.title {
+.heading {
   display: flex;
   align-items: center;
 }
 
-.title:hover .anchor {
+.heading:hover .anchor {
   opacity: 1;
 }
 
