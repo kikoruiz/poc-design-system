@@ -1,6 +1,7 @@
 import { appendFileSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
+import hexRgb from "hex-rgb";
 
 import { themes, Theme } from "./src/themes/index.js";
 
@@ -22,6 +23,12 @@ function toKebabCase(v: string) {
   return v.replace(/[A-Z]/g, (e) => `-${e.toLocaleLowerCase()}`);
 }
 
+function isHex(str: string) {
+  const regexp = /^#[0-9a-fA-F]+$/;
+
+  return regexp.test(str);
+}
+
 /* eslint-disable-next-line @typescript-eslint/ban-types */
 type FlattenedTheme = Record<"className" | (string & {}), string>;
 
@@ -39,9 +46,18 @@ function flattenTheme(theme: Theme, className: string): FlattenedTheme {
 
         return;
       }
-      /* eslint-disable-next-line fp/no-mutation */
-      if (typeof value === "string")
-        flattenedTheme[`${path}-${toKebabCase(key)}`] = value;
+
+      if (typeof value === "string") {
+        const getFormattedValue = () => {
+          if (isHex(value)) {
+            const { red, green, blue } = hexRgb(value);
+            return `${red} ${green} ${blue}`;
+          }
+          return value;
+        };
+        /* eslint-disable-next-line fp/no-mutation */
+        flattenedTheme[`${path}-${toKebabCase(key)}`] = getFormattedValue();
+      }
     });
   }
 

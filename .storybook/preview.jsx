@@ -1,3 +1,5 @@
+import '../src/tailwind.css';
+
 import { themes } from "../src/themes";
 
 const themeEntries = Object.entries(themes);
@@ -15,7 +17,7 @@ export const parameters = {
     list: Object.entries(themes).map(([name, themeConfig]) => ({
       name,
       class: name,
-      color: themeConfig.colors.accent,
+      color: themeConfig.colors.bg.body,
     })),
   },
 };

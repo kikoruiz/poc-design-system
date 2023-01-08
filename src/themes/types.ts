@@ -13,45 +13,26 @@ export type Theme = {
     m: string;
   };
   colors: {
-    text: string;
-    accent: string;
-    textLink: string;
-    "text-weak": string;
-    "text-weaker": string;
-    "text-weakest": string;
-    "text-on-accent": string;
-    "text-error": string;
-    "text-success": string;
-    "nav-surface": string;
-    "nav-heading": string;
-    "nav-hover": string;
-    border: string;
-    "border-strong": string;
-    surface: string;
-    background: string;
-    "surface-raised": string;
-    overlay: string;
-    "status-neutral": string;
-    "status-warning": string;
-    "status-highlight": string;
-    "status-danger": string;
-    "status-success": string;
-    "status-info": string;
-    "status-progress": string;
-    "status-neutral-weak": string;
-    "status-warning-weak": string;
-    "status-highlight-weak": string;
-    "status-danger-weak": string;
-    "status-success-weak": string;
-    "status-info-weak": string;
-    "status-progress-weak": string;
-    button: string;
-    "button-hover": string;
-    "border-hover": string;
-    icon: string;
-    "icon-hover": string;
-    active: string;
-    "box-shadow": string;
+    transparent: string;
+    bg: {
+      body: string;
+      primary: string;
+      primaryAccent: string;
+      primarySubtle: string;
+      secondary: string;
+      secondaryAccent: string;
+      secondarySubtle: string;
+    };
+    fg: {
+      default: string;
+      accent: string;
+      cta: string;
+      ctaInverse: string;
+    };
+    bd: {
+      primary: string;
+      secondary: string;
+    };
   };
   fontFamily: {
     openSans: string;
