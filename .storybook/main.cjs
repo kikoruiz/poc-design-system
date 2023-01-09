@@ -17,8 +17,7 @@ module.exports = {
     options: {},
   },
   docs: {
-    docsPage: true,
-    autodocs: true,
+    autodocs: "tag",
   },
   typescript: {
     // enable type checking
