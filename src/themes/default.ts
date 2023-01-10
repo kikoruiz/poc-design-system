@@ -33,7 +33,6 @@ export const defaultTheme: Theme = {
     },
     fg: {
       default: "#334155",
-
       accent: "#1161d7",
       cta: "#000",
       ctaInverse: "#fff",

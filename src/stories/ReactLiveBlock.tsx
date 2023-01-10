@@ -65,8 +65,26 @@ export function ReactLiveBlock({
             right: 5,
           }}
         >
-          {code !== editorCode && <button onClick={reset}>Reset code</button>}
-          <button onClick={onCopy}>{hasCopied ? "Copied" : "Copy"}</button>
+          {code !== editorCode && (
+            <button
+              onClick={reset}
+              style={{
+                color: "white",
+                fontSize: "1.4rem",
+              }}
+            >
+              Reset code
+            </button>
+          )}
+          <button
+            onClick={onCopy}
+            style={{
+              color: "white",
+              fontSize: "1.4rem",
+            }}
+          >
+            {hasCopied ? "Copied" : "Copy"}
+          </button>
         </div>
         <LiveEditor
           disabled={!editable}
@@ -121,7 +139,15 @@ export function CodeSnippet({ code }: CodeSnippetProps) {
             right: 5,
           }}
         >
-          <button onClick={onCopy}>{hasCopied ? "Copied" : "Copy"}</button>
+          <button
+            onClick={onCopy}
+            style={{
+              color: "white",
+              fontSize: "1.4rem",
+            }}
+          >
+            {hasCopied ? "Copied" : "Copy"}
+          </button>
         </div>
         <LiveEditor disabled />
       </div>

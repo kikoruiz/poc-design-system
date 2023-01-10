@@ -22,5 +22,20 @@ module.exports = {
   typescript: {
     // enable type checking
     check: true,
+    reactDocgen: "react-docgen-typescript",
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      propFilter: (prop) => {
+        if (!prop.parent) return true;
+
+        const canDisplayProp = !/node_modules(?!@radix-ui)/.test(
+          prop.parent.fileName
+        );
+
+        return prop.parent ? canDisplayProp : true;
+      },
+    },
   },
 };
+
+// // ? /node_modules(?!@radix-ui)/.test(prop.parent.fileName)

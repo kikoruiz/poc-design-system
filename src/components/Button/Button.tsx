@@ -18,6 +18,8 @@ export function Button({
   size = "small",
   ...rest
 }: PropsWithChildren<Props>) {
+  const buttonHtmlProps = { ...rest, disabled };
+
   return (
     <button
       className={buttonVariants({
@@ -26,7 +28,7 @@ export function Button({
         disabled: !!disabled,
         className,
       })}
-      {...{ ...rest, disabled }}
+      {...buttonHtmlProps}
     >
       {children}
     </button>
