@@ -1,7 +1,6 @@
-interface Props {
-  label?: string;
-}
+import { TabsList as List } from "./List";
+import { TabsTrigger as Trigger } from "./Trigger";
+import { TabsContent as Content } from "./Content";
+import { TabsRoot as Root } from "./Root";
 
-export const DummyComponent = ({ label = "Dummy component" }: Props) => {
-  return <p>{label}</p>;
-};
+export { List, Trigger, Content, Root };

@@ -1,34 +1,83 @@
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import {
+  ArgsTable,
+  Canvas,
+  Meta,
+  Story,
+  DocsContainer,
+} from "@storybook/addon-docs";
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+import { CodeSnippet, ReactLiveBlock } from "@stories/ReactLiveBlock";
+import { Title } from "@stories/Title";
+import cx from "classnames";
 
-import { DummyComponent } from ".";
+import * as Tabs from ".";
+import * as examples from "./TabsExamples.stories";
 
-<Meta title="Components/Disclosure/Tabs" component={DummyComponent} />
+<Meta
+  title="Components/Forms/Tabs"
+  component={Tabs.Root}
+  argTypes={{
+    themeSetting: {
+      type: "orientation",
+      table: {
+        defaultValue: { orientation: "vertical" },
+      },
+    },
+  }}
+/>
 
-export const Template = (args) => <DummyComponent {...args} />;
+# Tabs
 
-# DummyComponent
+A set of layered sections of content—known as tab panels—that are displayed one at a time.
 
-DummyComponent component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.
+<Title label="Import" />
 
-## Sandbox
+<CodeSnippet code='import { Tabs } from "@brikke-ui/tabs";' />
 
-<Canvas>
-  <Story
-    name="Sandbox"
-    args={{
-      label: "Dummy component",
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
+<Title label="Usage" />
 
-<ArgsTable story="Sandbox" />
+TODO
 
-## DummyComponent Variants
+<Title label="Props" />
 
-<Canvas>
-  <Story name="variants">
-    <DummyComponent label="DummyComponent (primary)" />
-  </Story>
-</Canvas>
+export const propsTabs = [
+  {
+    title: "<Tabs />",
+    value: "tab1",
+    component: Tabs.Root,
+  },
+  {
+    title: "<Tabs.List />",
+    value: "tab2",
+    component: Tabs.List,
+  },
+  {
+    title: "<Tabs.Trigger />",
+    value: "tab3",
+    component: Tabs.Trigger,
+  },
+  {
+    title: "<Tabs.Content />",
+    value: "tab4",
+    component: Tabs.Content,
+  },
+];
+
+<Tabs.Root defaultValue="tab1">
+  <Tabs.List>
+    {propsTabs.map(({ title, value }) => (
+      <Tabs.Trigger key={value} value={value}>
+        {title}
+      </Tabs.Trigger>
+    ))}
+  </Tabs.List>
+  {propsTabs.map(({ value, component }) => (
+    <Tabs.Content key={value} value={value}>
+      <ArgsTable of={component} />
+    </Tabs.Content>
+  ))}
+</Tabs.Root>
+
+<Title label="Variants" />
+
+<Story name="variants" story={examples.variants} />
