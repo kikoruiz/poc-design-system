@@ -1,8 +1,7 @@
-import { ComponentPropsWithoutRef } from "react";
 import { cva } from "class-variance-authority";
-import * as TabsPrimitive from "@radix-ui/react-tabs";
+import { Trigger, TabsTriggerProps } from "@radix-ui/react-tabs";
 
-export const tabsTriggerVariants = cva([
+export const styles = cva([
   "group", // ?
   /**
    * border styles
@@ -28,18 +27,28 @@ export const tabsTriggerVariants = cva([
   "focus-visible:ring-opacity-75",
 ]);
 
-interface TabsTriggerProps
-  extends ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger> {
+interface Props extends TabsTriggerProps {
   /** Custom description */
   toto?: string;
+  disabled?: boolean;
 }
 
-export const TabsTrigger = ({ children, ...rest }: TabsTriggerProps) => {
+export function TabsTrigger({
+  children,
+  asChild = false,
+  disabled = false,
+  ...rest
+}: Props) {
+  const defaultRadixValues = {
+    asChild,
+    disabled,
+  };
+
   return (
-    <TabsPrimitive.Trigger className={tabsTriggerVariants()} {...rest}>
+    <Trigger className={styles()} {...defaultRadixValues} {...rest}>
       {children}
-    </TabsPrimitive.Trigger>
+    </Trigger>
   );
-};
+}
 
 TabsTrigger.displayName = "Tabs.Trigger";

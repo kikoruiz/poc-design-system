@@ -1,7 +1,7 @@
 import cx from "classnames";
 import { ReactLiveBlock } from "@stories/ReactLiveBlock";
 
-import { Tabs } from ".";
+import * as Tabs from ".";
 
 interface Tab {
   title: string;
@@ -26,10 +26,10 @@ const tabs: Tab[] = [
 
 export const variants = () => (
   <ReactLiveBlock scope={{ Tabs }}>
-    <Tabs defaultValue="tab1">
+    <Tabs.Root defaultValue="tab1">
       <Tabs.List>
         {tabs.map(({ title, value }) => (
-          <Tabs.Trigger key={`tab-trigger-${value}`} value={value}>
+          <Tabs.Trigger key={value} value={value}>
             <span
               className={cx(
                 "text-m font-medium",
@@ -42,7 +42,7 @@ export const variants = () => (
         ))}
       </Tabs.List>
       {tabs.map(({ value }) => (
-        <Tabs.Content key={`tab-content-${value}`} value={value}>
+        <Tabs.Content key={value} value={value}>
           <span className="text-m text-gray-700 dark:text-gray-100">
             {
               {
@@ -54,6 +54,6 @@ export const variants = () => (
           </span>
         </Tabs.Content>
       ))}
-    </Tabs>
+    </Tabs.Root>
   </ReactLiveBlock>
 );
