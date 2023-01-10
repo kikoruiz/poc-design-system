@@ -35,4 +35,4 @@ export function TabsRoot({
   );
 }
 
-TabsRoot.displayName = "Tabs.Root";
+TabsRoot.displayName = TabsRoot.name

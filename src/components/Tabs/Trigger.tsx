@@ -51,4 +51,4 @@ export function TabsTrigger({
   );
 }
 
-TabsTrigger.displayName = "Tabs.Trigger";
+TabsTrigger.displayName = TabsTrigger.name;
