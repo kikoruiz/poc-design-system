@@ -30,20 +30,13 @@ export const variants = () => (
       <Tabs.List>
         {tabs.map(({ title, value }) => (
           <Tabs.Trigger key={value} value={value}>
-            <span
-              className={cx(
-                "text-m font-medium",
-                "text-gray-700 dark:text-gray-100"
-              )}
-            >
-              {title}
-            </span>
+            <span className={cx("text-m font-medium")}>{title}</span>
           </Tabs.Trigger>
         ))}
       </Tabs.List>
       {tabs.map(({ value }) => (
         <Tabs.Content key={value} value={value}>
-          <span className="text-m text-gray-700 dark:text-gray-100">
+          <span className="text-m">
             {
               {
                 tab1: "Your inbox is empty",
