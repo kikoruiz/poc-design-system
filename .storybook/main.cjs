@@ -20,22 +20,26 @@ module.exports = {
     autodocs: "tag",
   },
   typescript: {
-    // enable type checking
     check: true,
     reactDocgen: "react-docgen-typescript",
     reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true,
       propFilter: (prop) => {
-        if (!prop.parent) return true;
+        const prohibitedPropsRegexes = [
+          /node_modules\/\@types\/react\/index.d.ts/,
+        ];
 
-        const canDisplayProp = !/node_modules(?!@radix-ui)/.test(
-          prop.parent.fileName
-        );
+        if (prop.declarations?.length > 0) {
+          const isProhibitedProps = prop.declarations.some((declaration) =>
+            prohibitedPropsRegexes.some((regex) =>
+              regex.test(declaration.fileName)
+            )
+          );
 
-        return prop.parent ? canDisplayProp : true;
+          return !isProhibitedProps;
+        }
+
+        return true;
       },
     },
   },
 };
-
-// // ? /node_modules(?!@radix-ui)/.test(prop.parent.fileName)
