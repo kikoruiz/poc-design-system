@@ -1,24 +1,22 @@
-import { ComponentPropsWithoutRef, PropsWithChildren } from "react";
+import { ComponentPropsWithoutRef, PropsWithChildren } from 'react'
 
-import { buttonVariants, ButtonVariantsProps } from "./variants";
+import { buttonVariants, ButtonVariantsProps } from './variants'
 
-interface Props
-  extends ButtonVariantsProps,
-    ComponentPropsWithoutRef<"button"> {
-  className?: string;
-  disabled?: boolean;
+interface Props extends ButtonVariantsProps, ComponentPropsWithoutRef<'button'> {
+  className?: string
+  disabled?: boolean
 }
 
 export function Button({
   className,
-  color = "gray",
+  color = 'gray',
   children,
   disabled = false,
-  intent = "primary",
-  size = "small",
+  intent = 'primary',
+  size = 'small',
   ...rest
 }: PropsWithChildren<Props>) {
-  const buttonHtmlProps = { ...rest, disabled };
+  const buttonHtmlProps = { ...rest, disabled }
 
   return (
     <button
@@ -32,5 +30,5 @@ export function Button({
     >
       {children}
     </button>
-  );
+  )
 }

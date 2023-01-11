@@ -1,7 +1,7 @@
 interface Props {
-  label?: string;
+  label?: string
 }
 
-export const DummyComponent = ({ label = "Dummy component" }: Props) => {
-  return <p>{label}</p>;
-};
+export const DummyComponent = ({ label = 'Dummy component' }: Props) => {
+  return <p>{label}</p>
+}

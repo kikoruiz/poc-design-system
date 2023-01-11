@@ -1,6 +1,6 @@
-import { Button } from "./Button";
-import { ReactLiveBlock } from "@stories/ReactLiveBlock";
-import { Stack } from "@components/Stack";
+import { Button } from './Button'
+import { ReactLiveBlock } from '@stories/ReactLiveBlock'
+import { Stack } from '@components/Stack'
 
 export const variants = () => (
   <ReactLiveBlock scope={{ Button, Stack }}>
@@ -9,7 +9,7 @@ export const variants = () => (
       <Button intent="secondary">secondary button</Button>
     </Stack>
   </ReactLiveBlock>
-);
+)
 
 export const sizes = () => (
   <ReactLiveBlock scope={{ Button, Stack }}>
@@ -19,4 +19,4 @@ export const sizes = () => (
       <Button size="large">large button</Button>
     </Stack>
   </ReactLiveBlock>
-);
+)

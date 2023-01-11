@@ -1,12 +1,7 @@
-import { cva } from "class-variance-authority";
-import { List, TabsListProps } from "@radix-ui/react-tabs";
+import { cva } from 'class-variance-authority'
+import { List, TabsListProps } from '@radix-ui/react-tabs'
 
-export const styles = cva([
-  "flex",
-  "min-w-full",
-  "rounded-t-s",
-  "shadow-normal",
-]);
+export const styles = cva(['flex', 'min-w-full', 'rounded-t-s', 'shadow-normal'])
 
 export function TabsList({
   children,
@@ -17,13 +12,13 @@ export function TabsList({
   const defaultRadixValues = {
     asChild,
     loop,
-  };
+  }
 
   return (
     <List className={styles()} {...defaultRadixValues} {...rest}>
       {children}
     </List>
-  );
+  )
 }
 
-TabsList.displayName = TabsList.name;
+TabsList.displayName = TabsList.name

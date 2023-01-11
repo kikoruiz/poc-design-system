@@ -1,36 +1,36 @@
-import { cva, VariantProps } from "class-variance-authority";
-import { ComponentPropsWithoutRef } from "react";
+import { cva, VariantProps } from 'class-variance-authority'
+import { ComponentPropsWithoutRef } from 'react'
 
-const stack = cva(["flex"], {
+const stack = cva(['flex'], {
   variants: {
     flexDirection: {
-      row: ["flex-row"],
-      column: ["flex-col"],
+      row: ['flex-row'],
+      column: ['flex-col'],
     },
     alignItems: {
-      start: ["items-start"],
-      center: ["items-center"],
-      end: ["items-end"],
+      start: ['items-start'],
+      center: ['items-center'],
+      end: ['items-end'],
     },
     justifyContent: {
-      start: ["justify-start"],
-      center: ["justify-center"],
-      end: ["justify-end"],
+      start: ['justify-start'],
+      center: ['justify-center'],
+      end: ['justify-end'],
     },
     gap: {
-      xs: ["gap-xs"],
-      s: ["gap-s"],
-      m: ["gap-m"],
-      l: ["gap-l"],
+      xs: ['gap-xs'],
+      s: ['gap-s'],
+      m: ['gap-m'],
+      l: ['gap-l'],
     },
   },
   defaultVariants: {
-    flexDirection: "row",
-    gap: "s",
+    flexDirection: 'row',
+    gap: 's',
   },
-});
+})
 
-type CVAProps = VariantProps<typeof stack>;
+type CVAProps = VariantProps<typeof stack>
 
 export function Stack({
   children,
@@ -39,7 +39,7 @@ export function Stack({
   justifyContent,
   gap,
   ...rest
-}: Omit<ComponentPropsWithoutRef<"div">, "className"> & CVAProps) {
+}: Omit<ComponentPropsWithoutRef<'div'>, 'className'> & CVAProps) {
   return (
     <div
       className={stack({
@@ -52,5 +52,5 @@ export function Stack({
     >
       {children}
     </div>
-  );
+  )
 }
