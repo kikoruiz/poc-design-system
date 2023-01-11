@@ -4,7 +4,7 @@ import { List, TabsListProps } from "@radix-ui/react-tabs";
 export const styles = cva([
   "flex",
   "min-w-full",
-  "rounded-t-m",
+  "rounded-t-s",
   "bg-bg-primary",
 ]);
 
