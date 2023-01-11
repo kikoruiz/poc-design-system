@@ -1,17 +1,11 @@
-import {
-  ArgsTable,
-  Canvas,
-  Meta,
-  Story,
-  DocsContainer,
-} from "@storybook/addon-docs";
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
-import { CodeSnippet, ReactLiveBlock } from "@stories/ReactLiveBlock";
-import { Title } from "@stories/Title";
+import { ArgsTable, Canvas, Meta, Story, DocsContainer } from '@storybook/addon-docs'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { ReactLiveBlock } from '@stories/ReactLiveBlock'
+import { Title } from '@stories/Title'
 
-import { Button } from "./Button";
+import { Button } from './Button'
 
-import * as examples from "./ButtonExamples.stories";
+import * as examples from './ButtonExamples.stories'
 
 <Meta title="Components/Forms/Button" component={Button} />
 
@@ -19,7 +13,9 @@ import * as examples from "./ButtonExamples.stories";
 
 <Title label="Import" />
 
-<CodeSnippet code='import { Button } from "@brikke-ui/button";' />
+```
+import { Button } from "@ds-name-to-define/button";
+```
 
 <Title label="Usage" />
 

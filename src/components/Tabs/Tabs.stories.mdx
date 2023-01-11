@@ -1,19 +1,19 @@
-import { ArgsTable, Meta, Story, DocsContainer } from "@storybook/addon-docs";
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
-import { CodeSnippet, ReactLiveBlock } from "@stories/ReactLiveBlock";
-import { Title } from "@stories/Title";
-import cx from "classnames";
+import { ArgsTable, Meta, Story, DocsContainer } from '@storybook/addon-docs'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { ReactLiveBlock } from '@stories/ReactLiveBlock'
+import { Title } from '@stories/Title'
+import cx from 'classnames'
 
-import { Tabs } from ".";
-import * as examples from "./TabsExamples.stories";
+import { Tabs } from '.'
+import * as examples from './TabsExamples.stories'
 
 <Meta
-  title="Components/Forms/Tabs"
+  title="Components/Disclosure/Tabs"
   component={Tabs}
   subcomponents={{
-    "Tabs.List": Tabs.List,
-    "Tabs.Trigger": Tabs.Trigger,
-    "Tabs.Content": Tabs.Content,
+    'Tabs.List': Tabs.List,
+    'Tabs.Trigger': Tabs.Trigger,
+    'Tabs.Content': Tabs.Content,
   }}
 />
 
@@ -23,13 +23,17 @@ A set of layered sections of content—known as tab panels—that are displayed 
 
 <Title label="Installation" />
 
-<CodeSnippet code="npm install @ds-name-to-define/tabs;" />
+```
+npm install @ds-name-to-define/tabs
+```
 
 <Title label="Usage" />
 
 Import all parts and piece them together.
 
-<CodeSnippet code='import { Tabs } from "@ds-name-to-define/tabs";' />
+```
+import { Tabs } from "@ds-name-to-define/tabs";
+```
 
 <Title label="Props" />
 
