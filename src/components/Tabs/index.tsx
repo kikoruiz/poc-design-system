@@ -3,11 +3,15 @@ import { TabsTrigger as Trigger } from "./Trigger";
 import { TabsContent as Content } from "./Content";
 import { TabsRoot as Root } from "./Root";
 
-export { List as List, Trigger, Content, Root };
-
 // we have to override the "displayName" values here,
 // in order to make it work with ReactLiveBlock
-List.displayName = "Tabs.List";
+Root.displayName = "Tabs"; // <-  the Root Component must be the first to be set 🤷
 Trigger.displayName = "Tabs.Trigger";
+List.displayName = "Tabs.List";
 Content.displayName = "Tabs.Content";
-Root.displayName = "Tabs.Root";
+
+export const Tabs = Object.assign(Root, {
+  List,
+  Trigger,
+  Content,
+});

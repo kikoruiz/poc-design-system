@@ -26,4 +26,4 @@ export function TabsContent({ children, asChild = false, ...rest }: Props) {
   );
 }
 
-TabsContent.displayName = TabsContent.name
+TabsContent.displayName = TabsContent.name;
