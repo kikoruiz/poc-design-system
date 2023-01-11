@@ -1,28 +1,28 @@
-import cx from "classnames";
-import { ReactLiveBlock } from "@stories/ReactLiveBlock";
+import cx from 'classnames'
+import { ReactLiveBlock } from '@stories/ReactLiveBlock'
 
-import { Tabs } from ".";
+import { Tabs } from '.'
 
 interface Tab {
-  title: string;
-  value: string;
+  title: string
+  value: string
 }
 
 const tabs: Tab[] = [
   {
-    title: "Inbox",
-    value: "tab1",
+    title: 'Inbox',
+    value: 'tab1',
   },
   {
-    title: "Today",
-    value: "tab2",
+    title: 'Today',
+    value: 'tab2',
   },
 
   {
-    title: "Upcoming",
-    value: "tab3",
+    title: 'Upcoming',
+    value: 'tab3',
   },
-];
+]
 
 export const variants = () => (
   <ReactLiveBlock scope={{ Tabs }}>
@@ -30,7 +30,7 @@ export const variants = () => (
       <Tabs.List>
         {tabs.map(({ title, value }) => (
           <Tabs.Trigger key={value} value={value}>
-            <span className={cx("text-m font-medium")}>{title}</span>
+            <span className={cx('font-medium text-m')}>{title}</span>
           </Tabs.Trigger>
         ))}
       </Tabs.List>
@@ -39,9 +39,9 @@ export const variants = () => (
           <span className="text-m">
             {
               {
-                tab1: "Your inbox is empty",
-                tab2: "Make some coffee",
-                tab3: "Order more coffee",
+                tab1: 'Your inbox is empty',
+                tab2: 'Make some coffee',
+                tab3: 'Order more coffee',
               }[value]
             }
           </span>
@@ -49,4 +49,4 @@ export const variants = () => (
       ))}
     </Tabs>
   </ReactLiveBlock>
-);
+)
