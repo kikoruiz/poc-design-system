@@ -3,17 +3,13 @@ import { cva } from "class-variance-authority";
 import { Root, TabsProps } from "@radix-ui/react-tabs";
 
 export const styles = cva([
+  "flex",
+  "flex-col",
   "rounded-b-lg",
   "bg-white",
   "px-6",
   "py-4",
-  "dark:bg-gray-800",
 ]);
-
-interface Props extends TabsProps {
-  /** Custom description */
-  toto?: string;
-}
 
 export function TabsRoot({
   children,
@@ -21,7 +17,7 @@ export function TabsRoot({
   orientation = "horizontal",
   activationMode = "automatic",
   ...rest
-}: PropsWithChildren<Props>) {
+}: PropsWithChildren<TabsProps>) {
   const defaultRadixValues = {
     asChild,
     orientation,
@@ -35,4 +31,4 @@ export function TabsRoot({
   );
 }
 
-TabsRoot.displayName = TabsRoot.name
+TabsRoot.displayName = TabsRoot.name;
