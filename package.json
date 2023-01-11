@@ -11,6 +11,7 @@
     "build-storybook": "storybook build",
     "upgrade-storybook": "storybook upgrade --prerelease",
     "storybook": "storybook dev -p 6006",
+    "prettier": "prettier --config .prettierrc.json --write \"src/**/*.{ts,tsx}\"",
     "write-themes": "ts-node-esm writeThemes.ts",
     "write-tailwind-conf": "ts-node-esm writeTailwindConfig.ts"
   },
@@ -41,6 +42,8 @@
     "postcss": "^8.4.20",
     "postcss-import": "^15.1.0",
     "postcss-nesting": "^10.2.0",
+    "prettier": "2.8.2",
+    "prettier-plugin-tailwindcss": "0.2.1",
     "react-element-to-jsx-string": "^15.0.0",
     "storybook": "^7.0.0-beta.21",
     "storybook-addon-themes": "^6.1.0",
