@@ -1,4 +1,4 @@
-export type Theme = {
+export interface Theme {
   screens: {
     sm: string
     md: string
