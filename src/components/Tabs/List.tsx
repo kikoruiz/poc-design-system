@@ -5,20 +5,15 @@ export const styles = cva([
   "flex",
   "min-w-full",
   "rounded-t-s",
-  "bg-bg-primary",
+  "shadow-normal",
 ]);
-
-interface Props extends TabsListProps {
-  /** Custom description */
-  toto?: string;
-}
 
 export function TabsList({
   children,
   asChild = false,
   loop = true,
   ...rest
-}: Props) {
+}: TabsListProps) {
   const defaultRadixValues = {
     asChild,
     loop,
@@ -31,4 +26,4 @@ export function TabsList({
   );
 }
 
-TabsList.displayName = TabsList.name
+TabsList.displayName = TabsList.name;
