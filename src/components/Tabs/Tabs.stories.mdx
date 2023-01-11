@@ -1,11 +1,11 @@
 import { ArgsTable, Meta, Story, DocsContainer } from '@storybook/addon-docs'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { ReactLiveBlock } from '@stories/ReactLiveBlock'
-import { Title } from '@stories/Title'
+import { ReactLiveBlock } from '@devtools/ReactLiveBlock'
+import { StoryHeading } from '@devtools/StoryHeading'
 import cx from 'classnames'
 
 import { Tabs } from '.'
-import * as examples from './TabsExamples.stories'
+import * as examples from './TabsExamples'
 
 <Meta
   title="Components/Disclosure/Tabs"
@@ -21,13 +21,13 @@ import * as examples from './TabsExamples.stories'
 
 A set of layered sections of content—known as tab panels—that are displayed one at a time.
 
-<Title label="Installation" />
+<StoryHeading label="Installation" />
 
 ```
 npm install @ds-name-to-define/tabs
 ```
 
-<Title label="Usage" />
+<StoryHeading label="Usage" />
 
 Import all parts and piece them together.
 
@@ -35,10 +35,10 @@ Import all parts and piece them together.
 import { Tabs } from "@ds-name-to-define/tabs";
 ```
 
-<Title label="Props" />
+<StoryHeading label="Props" />
 
 <ArgsTable of={Tabs} />
 
-<Title label="Variants" />
+<StoryHeading label="Variants" />
 
 <Story name="variants" story={examples.variants} />

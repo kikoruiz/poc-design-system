@@ -1,6 +1,7 @@
-import { Button } from './Button'
-import { ReactLiveBlock } from '@stories/ReactLiveBlock'
 import { Stack } from '@components/Stack'
+import { ReactLiveBlock } from '@devtools/ReactLiveBlock'
+
+import { Button } from './Button'
 
 export const variants = () => (
   <ReactLiveBlock scope={{ Button, Stack }}>

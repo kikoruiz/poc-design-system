@@ -1,5 +1,5 @@
+import { ReactLiveBlock } from '@devtools/ReactLiveBlock'
 import cx from 'classnames'
-import { ReactLiveBlock } from '@stories/ReactLiveBlock'
 
 import { Tabs } from '.'
 
