@@ -6,6 +6,7 @@ const themeEntries = Object.entries(themes);
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  backgrounds: { disable: true },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -17,7 +18,7 @@ export const parameters = {
     list: Object.entries(themes).map(([name, themeConfig]) => ({
       name,
       class: name,
-      color: themeConfig.colors.bg.body,
+      color: themeConfig.colors.bg.primary,
     })),
   },
 };
