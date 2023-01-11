@@ -12,30 +12,26 @@ If your organism is composed of more than one visual element (component), you MU
 > Instead of having props defined on the main wrapper of your organism that exist just to pass down to its internal children, we render the children directly.
 
 **The compound component pattern is the pattern to use when creating a new Brikke
-organism. We took a Popover organism as an example in the following section, but this
+organism. We took a Tabs organism as an example in the following section, but this
 pattern can be applied to any organism.**
 
 <Title label="Using a compound component" />
 
-```jsx title="/src/MyPage/MyPopover/index.tsx"
-import { Popover } from '@ds-name-to-define/popover'
+```jsx title="/src/MyPage/MyTabs/index.tsx"
+import { MyTabs } from '@ds-name-to-define/tabs'
 
-const MyPopover = () => {
+const MyTabs = () => {
   return (
-    <Popover>
-      <Popover.Trigger>
-        <button type="button">See conditions</button>
-      </Popover.Trigger>
-
-      <Popover.Overlay />
-
-      <Popover.Content>
-        <Popover.Arrow />
-        <Popover.CloseButton />
-        <h3>Condition:</h3>
-        <p>Officia adipisicing enim id aute nostrud enim eiusmod ea in laboris.</p>
-      </Popover.Content>
-    </Popover>
+    <Tabs defaultValue="tab1">
+      <Tabs.List>
+        <Tabs.Trigger value="tab1">Inbox</Tabs.Trigger>
+        <Tabs.Trigger value="tab2">Today</Tabs.Trigger>
+        <Tabs.Trigger value="tab3">Upcoming</Tabs.Trigger>
+      </Tabs.List>
+      <Tabs.Content value="tab1">Your inbox is empty</Tabs.Content>
+      <Tabs.Content value="tab2">Make some coffee</Tabs.Content>
+      <Tabs.Content value="tab3">Order more coffee</Tabs.Content>
+    </Tabs>
   )
 }
 ```
