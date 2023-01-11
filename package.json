@@ -11,9 +11,11 @@
     "build-storybook": "storybook build",
     "upgrade-storybook": "storybook upgrade --prerelease",
     "storybook": "storybook dev -p 6006",
+    "lint-staged": "lint-staged --config .lintstagedrc.json",
     "prettier": "prettier --config .prettierrc.json --write \"src/**/*.{ts,tsx}\"",
     "write-themes": "ts-node-esm writeThemes.ts",
-    "write-tailwind-conf": "ts-node-esm writeTailwindConfig.ts"
+    "write-tailwind-conf": "ts-node-esm writeTailwindConfig.ts",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "classnames": "^2.3.2",
@@ -39,6 +41,8 @@
     "class-variance-authority": "^0.4.0",
     "copy-to-clipboard": "^3.3.3",
     "hex-rgb": "5.0.0",
+    "husky": "8.0.3",
+    "lint-staged": "13.1.0",
     "postcss": "^8.4.20",
     "postcss-import": "^15.1.0",
     "postcss-nesting": "^10.2.0",
