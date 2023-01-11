@@ -5,7 +5,13 @@ interface Props {
   label: string
 }
 
-export function Title({ label, heading = 'h2' }: Props) {
+/**
+ * As of today, there is a bug in MDX heading preventing HTML anchors from working.
+ * Issue: https://github.com/storybookjs/storybook/issues/20519
+ *
+ * Until this is resolved, we must use this compoennt instead of markdown syntax for headings inside stories.
+ */
+export function StoryHeading({ label, heading = 'h2' }: Props) {
   const HeadingTag = heading as keyof JSX.IntrinsicElements
   const slugifiedLabel = slugify(label)
 

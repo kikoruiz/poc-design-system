@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/blocks'
-import { Title } from '@stories/Title'
+import { StoryHeading } from '@devtools/StoryHeading'
 
 <Meta title="Contributing/Compound Component" />
 
@@ -15,7 +15,7 @@ If your organism is composed of more than one visual element (component), you MU
 organism. We took a Tabs organism as an example in the following section, but this
 pattern can be applied to any organism.**
 
-<Title label="Using a compound component" />
+<StoryHeading label="Using a compound component" />
 
 ```jsx title="/src/MyPage/MyTabs/index.tsx"
 import { MyTabs } from '@ds-name-to-define/tabs'
@@ -36,7 +36,7 @@ const MyTabs = () => {
 }
 ```
 
-<Title label="Implementation" />
+<StoryHeading label="Implementation" />
 
 ```jsx title="/packages/tabs/src/index.tsx"
 import { TabsList as List } from './List'
@@ -58,23 +58,23 @@ export const Tabs = Object.assign(Root, {
 })
 ```
 
-<Title label="Explanation" />
+<StoryHeading label="Explanation" />
 
 - `Tabs` is the Main wrapper. It acts as a context provider so that its children can communicate with each other without relying on props. The context is optional, for simpler organisms, you might not need it.
 - `Object.assign` is then used to attach molecules to the compound organism `Tabs`. It allows us to do `<Tabs.List />, <Tabs.Trigger />, etc` to use an atom. Note that typescript likes this approach better and merge the types correctly without explicit typing.
 - **No `default` export**. This is for better discoverability.
   See [why in details](https://basarat.gitbook.io/typescript/main-1/defaultisbad). Optionally, this is where you can also export your types/constants.
 
-<Title label="Benefits" />
+<StoryHeading label="Benefits" />
 
-<Title label="Discoverability" heading="h3" />
+<StoryHeading label="Discoverability" heading="h3" />
 
 - Typing "`Tabs.`" will autocomplete the molecules to the developer. He/she does not need to know their name to discover them (`Tabs.List`, `Tabs.Trigger`, etc).
 - The JSDoc comments above each atom will be visible in the IDE.
 - A link to the ZeroHeight specifications is accessible from the main wrapper of the organism.
 - It needs a single import `import { Tabs } from '@ds-name-to-define/tabs` to work. Instead of something like `import { Tabs, TabsTrigger, TabsList, etc... }`
 
-<Title label="Composability" heading="h3" />
+<StoryHeading label="Composability" heading="h3" />
 
 Composability comes from the fact that your organism is comprised of multiple components, instead of being a monolithic organism.
 
