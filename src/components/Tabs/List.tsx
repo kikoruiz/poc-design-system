@@ -31,4 +31,4 @@ export function TabsList({
   );
 }
 
-TabsList.displayName = "Tabs.List";
+TabsList.displayName = TabsList.name

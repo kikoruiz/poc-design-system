@@ -10,21 +10,10 @@ import { CodeSnippet, ReactLiveBlock } from "@stories/ReactLiveBlock";
 import { Title } from "@stories/Title";
 import cx from "classnames";
 
-import * as Tabs from ".";
+import { Tabs } from ".";
 import * as examples from "./TabsExamples.stories";
 
-<Meta
-  title="Components/Forms/Tabs"
-  component={Tabs.Root}
-  argTypes={{
-    themeSetting: {
-      type: "orientation",
-      table: {
-        defaultValue: { orientation: "vertical" },
-      },
-    },
-  }}
-/>
+<Meta title="Components/Forms/Tabs" component={Tabs} />
 
 # Tabs
 
@@ -44,7 +33,7 @@ export const propsTabs = [
   {
     title: "<Tabs />",
     value: "tab1",
-    component: Tabs.Root,
+    component: Tabs,
   },
   {
     title: "<Tabs.List />",
@@ -63,7 +52,7 @@ export const propsTabs = [
   },
 ];
 
-<Tabs.Root defaultValue="tab1">
+<Tabs defaultValue="tab1">
   <Tabs.List>
     {propsTabs.map(({ title, value }) => (
       <Tabs.Trigger key={value} value={value}>
@@ -76,7 +65,7 @@ export const propsTabs = [
       <ArgsTable of={component} />
     </Tabs.Content>
   ))}
-</Tabs.Root>
+</Tabs>
 
 <Title label="Variants" />
 
