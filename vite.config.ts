@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
@@ -20,5 +21,13 @@ export default defineConfig({
         replacement: path.resolve(__dirname, './src/components'),
       },
     ],
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: 'vitest.setup.ts',
+    // you might want to disable it, if you don't have tests that rely on CSS
+    // since parsing CSS is slow
+    css: true,
   },
 })

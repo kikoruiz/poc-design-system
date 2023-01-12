@@ -26,6 +26,6 @@
       "@components/*": ["src/components/*"],
     }
   },
-  "include": ["src", "global.d.ts", "stories"],
+  "exclude": ["node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
