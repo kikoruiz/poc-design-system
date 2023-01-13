@@ -1,11 +1,9 @@
-import '../src/tailwind.css';
+import { themes } from '../src/themes'
 
-import { themes } from "../src/themes";
-
-const themeEntries = Object.entries(themes);
+const themeEntries = Object.entries(themes)
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   backgrounds: { disable: true },
   controls: {
     matchers: {
@@ -21,12 +19,12 @@ export const parameters = {
       color: themeConfig.colors.bg.primary,
     })),
   },
-};
+}
 
 export const decorators = [
-  (Story) => (
-    <div style={{ paddingTop: "1rem" }}>
+  Story => (
+    <div style={{ paddingTop: '1rem' }}>
       <Story />
     </div>
   ),
-];
+]
