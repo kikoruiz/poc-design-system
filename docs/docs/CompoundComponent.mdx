@@ -18,7 +18,7 @@ pattern can be applied to any organism.**
 <StoryHeading label="Using a compound component" />
 
 ```jsx title="/src/MyPage/MyTabs/index.tsx"
-import { MyTabs } from '@ds-name-to-define/tabs'
+import { MyTabs } from '@ds-name/tabs'
 
 const MyTabs = () => {
   return (
@@ -72,7 +72,7 @@ export const Tabs = Object.assign(Root, {
 - Typing "`Tabs.`" will autocomplete the molecules to the developer. He/she does not need to know their name to discover them (`Tabs.List`, `Tabs.Trigger`, etc).
 - The JSDoc comments above each atom will be visible in the IDE.
 - A link to the ZeroHeight specifications is accessible from the main wrapper of the organism.
-- It needs a single import `import { Tabs } from '@ds-name-to-define/tabs` to work. Instead of something like `import { Tabs, TabsTrigger, TabsList, etc... }`
+- It needs a single import `import { Tabs } from '@ds-name/tabs` to work. Instead of something like `import { Tabs, TabsTrigger, TabsList, etc... }`
 
 <StoryHeading label="Composability" heading="h3" />
 

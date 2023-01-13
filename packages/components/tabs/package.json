@@ -1,0 +1,15 @@
+{
+    "name": "@ds-name/tabs",
+    "version": "0.0.0",
+    "description": "A React component that helps you build accessible tabs, by providing keyboard interactions and ARIA attributes described in the WAI-ARIA Tab Panel Design Pattern.",
+    "type": "module",
+    "main": "dist/cjs/index.js",
+    "exports": {
+        ".": "./index.ts"
+    },
+    "scripts": {
+        "build": "ts-node-esm ../../../bin/leaf-packages/build-component.ts"
+    },
+    "author": "",
+    "license": "ISC"
+}

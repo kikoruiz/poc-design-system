@@ -23,9 +23,9 @@
     "paths": {
       "@devtools/*": ["src/devtools/*"],
       "@docs/*": ["docs/*"],
-      "@components/*": ["src/components/*"],
+      "@components/*": ["packages/components/*"],
     }
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", ".swcrc"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
