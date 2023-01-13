@@ -13,9 +13,9 @@
     "storybook:build": "storybook build",
     "storybook:upgrade": "storybook upgrade --prerelease",
     "storybook": "storybook dev -p 6006",
-    "lint": "eslint --config .eslintrc.cjs ./src --ext .ts,.tsx,.js --fix",
+    "lint": "eslint --config .eslintrc.cjs ./packages --ext .ts,.tsx,.js --fix",
     "lint-staged": "lint-staged --config .lintstagedrc.json",
-    "prettier": "prettier --config .prettierrc.json --write \"src/**/*.{ts,tsx}\"",
+    "prettier": "prettier --config .prettierrc.json --write \"{packages,src}/**/*.{ts,tsx}\"",
     "write-themes": "ts-node-esm writeThemes.ts",
     "write-tailwind-conf": "ts-node-esm writeTailwindConfig.ts",
     "postinstall": "husky install"

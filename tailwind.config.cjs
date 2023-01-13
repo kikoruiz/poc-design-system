@@ -6,6 +6,6 @@ module.exports = {
   theme: {
     ...themeConf,
   },
-  content: ['./packages/**/*.{js,ts,jsx,tsx}'],
+  content: ['./src/tailwind.css', './packages/**/*.{js,ts,jsx,tsx}'],
   plugins: [require('tailwindcss-radix')()],
 }
