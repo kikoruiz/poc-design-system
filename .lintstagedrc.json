@@ -2,5 +2,9 @@
   "src/**/*.ts?(x)": [
     "eslint --config .eslintrc.prod.cjs --fix",
     "prettier --config .prettierrc.json --write"
+  ],
+  "packages/**/*.ts?(x)": [
+    "eslint --config .eslintrc.prod.cjs --fix",
+    "prettier --config .prettierrc.json --write"
   ]
 }
