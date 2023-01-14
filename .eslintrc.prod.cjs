@@ -21,7 +21,6 @@ module.exports = {
   globals: {
     fetch: 'readonly',
   },
-  ignorePatterns: ['*.cjs', 'vite.config.ts', 'writeThemes.ts', 'writeTailwindConfig.ts','node_modules/'],
   parserOptions: {
     project: './tsconfig.json',
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features

@@ -6,6 +6,10 @@ module.exports = {
   theme: {
     ...themeConf,
   },
-  content: ['./src/tailwind.css', './packages/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './packages/**/*.{js,ts,jsx,tsx}',
+    /* 👇 in order for the theme switching to work in dev mode */
+    './src/tailwind.css',
+  ],
   plugins: [require('tailwindcss-radix')()],
 }
