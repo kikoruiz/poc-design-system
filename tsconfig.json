@@ -1,31 +1,18 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "noImplicitReturns": true,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "jsx": "react-jsx",
-    "paths": {
-      "@devtools/*": ["src/devtools/*"],
-      "@docs/*": ["docs/*"],
-      "@components/*": ["packages/components/*"],
-    }
-  },
-  "exclude": ["node_modules", ".swcrc"],
-  "references": [{ "path": "./tsconfig.node.json" }]
-}
+    "extends": "./tsconfig.build.json",
+    "compilerOptions": {
+      "baseUrl": ".",
+      "composite": false,
+      "downlevelIteration": true,
+      "emitDeclarationOnly": false,
+      "noEmit": true,
+      "paths": {
+        "@devtools/*": ["src/devtools/*"],
+        "@docs/*": ["docs/*"],
+        "@components/*": ["packages/components/*/src"],
+      }
+    },
+    // Overwrite “exclude” from parent config, so we can typecheck tests for local development
+    "exclude": ["node_modules"]
+  }
+  
