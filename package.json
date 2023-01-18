@@ -17,8 +17,8 @@
     "lint-staged": "lint-staged --config .lintstagedrc.json",
     "prettier": "prettier --config .prettierrc.json --write \"{packages,src}/**/*.{ts,tsx}\"",
     "typecheck": "tsc",
-    "write-themes": "ts-node-esm writeThemes.ts",
-    "write-tailwind-conf": "ts-node-esm writeTailwindConfig.ts",
+    "write-themes": "ts-node-esm themeConfig/writeThemes.ts",
+    "write-tailwind-conf": "ts-node-esm themeConfig/writeTailwindConfig.ts",
     "postinstall": "husky install"
   },
   "dependencies": {
