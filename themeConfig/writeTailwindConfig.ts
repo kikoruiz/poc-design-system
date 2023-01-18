@@ -1,10 +1,10 @@
 import { writeFileSync } from 'fs'
-import { join, dirname } from 'path'
+import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
 
 import { themes } from '../src/themes/index.js'
 import type { Theme } from '../src/themes/types'
-import { objectEntries, toKebabCase, isHex, toKebabCaseKeys } from './utils.js'
+import { isHex, objectEntries, toKebabCase, toKebabCaseKeys } from './utils.js'
 
 const __filename = fileURLToPath(import.meta.url)
 

@@ -1,7 +1,7 @@
-import { TabsList as List } from './List'
-import { TabsTrigger as Trigger } from './Trigger'
 import { TabsContent as Content } from './Content'
+import { TabsList as List } from './List'
 import { TabsRoot as Root } from './Root'
+import { TabsTrigger as Trigger } from './Trigger'
 
 // we have to override the "displayName" values here,
 // in order to make it work with ReactLiveBlock

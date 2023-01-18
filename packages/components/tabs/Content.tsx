@@ -1,13 +1,7 @@
+import { Content, TabsContentProps } from '@radix-ui/react-tabs'
 import { cva } from 'class-variance-authority'
-import { TabsContentProps, Content } from '@radix-ui/react-tabs'
 
-export const styles = cva([
-  'rounded-b-lg',
-  'bg-white',
-  'p-m',
-  'shadow-normal',
-  'rounded-b-s',
-])
+export const styles = cva(['rounded-b-lg', 'bg-white', 'p-m', 'shadow-normal', 'rounded-b-s'])
 
 export function TabsContent({ children, asChild = false, ...rest }: TabsContentProps) {
   const defaultRadixValues = {
