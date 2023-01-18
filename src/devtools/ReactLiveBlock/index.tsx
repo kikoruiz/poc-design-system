@@ -15,11 +15,7 @@ interface ReactLiveBlockProps {
 /** Type casting is necessary because original FC type does not allow implicitChildren  */
 const UnstyledBlock = Unstyled as (props: PropsWithChildren) => ReactElement
 
-export function ReactLiveBlock({
-  children,
-  editable = true,
-  scope,
-}: ReactLiveBlockProps) {
+export function ReactLiveBlock({ children, editable = true, scope }: ReactLiveBlockProps) {
   const childrenLength = React.Children.toArray(children).length
   const code = reactElementToJSXString(childrenLength > 1 ? <>{children}</> : children, {
     showFunctions: true,

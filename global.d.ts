@@ -1,1 +1,1 @@
-declare module "jsx-to-string";
+declare module 'jsx-to-string'

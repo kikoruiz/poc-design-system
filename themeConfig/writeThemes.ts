@@ -1,10 +1,10 @@
 import { appendFileSync } from 'fs'
-import { join, dirname } from 'path'
-import { fileURLToPath } from 'url'
 import hexRgb from 'hex-rgb'
+import { dirname, join } from 'path'
+import { fileURLToPath } from 'url'
 
-import { themes, Theme } from '../src/themes/index.js'
-import { objectKeys, objectEntries, toKebabCase, isHex } from './utils.js'
+import { Theme, themes } from '../src/themes/index.js'
+import { isHex, objectEntries, objectKeys, toKebabCase } from './utils.js'
 
 const __filename = fileURLToPath(import.meta.url)
 
