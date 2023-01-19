@@ -1,7 +1,7 @@
 import { ReactLiveBlock } from '@devtools/ReactLiveBlock'
 import cx from 'classnames'
 
-import { Tabs } from '../'
+import { Tabs } from '../src/'
 
 interface Tab {
   title: string

@@ -6,7 +6,7 @@
       "syntax": "typescript",
       "tsx": true
     },
-    "target": "es6",
+    "target": "es2015",
     "loose": false,
     "minify": {
       "compress": {
