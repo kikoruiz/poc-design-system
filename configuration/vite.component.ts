@@ -11,6 +11,7 @@ const devDeps = Object.keys(pkg.devDependencies || {})
 
 export default {
   build: {
+    target: 'es2015',
     lib: {
       entry: 'src/index.ts',
       formats: ['es', 'cjs'],
