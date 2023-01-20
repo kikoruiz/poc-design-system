@@ -1,15 +1,17 @@
-import path from 'path'
-
 import merge from './merge'
 import componentConfiguration from './vite.component'
 
+interface Pkg {
+  name: string
+  version: string
+}
 /**
  * Returns Vite build configuration for components packages,
  * optionally amended with the specified options
  * @param options Custom build options
  * @returns Vite build configuration
  */
-export function getComponentConfiguration(pkg, options = {}) {
+export function getComponentConfiguration(pkg: Pkg, options = {}) {
   console.log(`Building component package ${pkg.name} v.${pkg.version} ...`)
 
   return getConfiguration(componentConfiguration, options, pkg.name)
@@ -22,7 +24,7 @@ export function getComponentConfiguration(pkg, options = {}) {
  * @param name Optional name of a library, used when building a library instead of browser-executable package
  * @returns Vite build configuration
  */
-function getConfiguration(configuration, options = {}, name) {
+function getConfiguration(configuration: Record<string, unknown>, options = {}, name?: string) {
   const result = merge(
     // Default configuration
     configuration,

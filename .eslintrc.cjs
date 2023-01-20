@@ -74,7 +74,7 @@ module.exports = {
     // Misc
     'array-callback-return': 1,
     complexity: [1, 8],
-    curly: [1, 'multi', 'consistent'],
+    curly: [1, 'all'],
     'max-lines': [1, { max: 300, skipBlankLines: true, skipComments: true }],
     'max-lines-per-function': [1, { max: 100, skipBlankLines: true, skipComments: true }],
     'max-depth': [2, 2],

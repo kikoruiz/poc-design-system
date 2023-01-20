@@ -12,10 +12,14 @@ export function useClipboard(value: string) {
   useEffect(() => {
     let timeoutId: number | null = null
 
-    if (hasCopied) timeoutId = window.setTimeout(() => setHasCopied(false), timeout)
+    if (hasCopied) {
+      timeoutId = window.setTimeout(() => setHasCopied(false), timeout)
+    }
 
     return () => {
-      if (timeoutId) window.clearTimeout(timeoutId)
+      if (timeoutId) {
+        window.clearTimeout(timeoutId)
+      }
     }
   }, [timeout, hasCopied])
 

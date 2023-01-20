@@ -6,8 +6,8 @@ import dts from 'vite-plugin-dts'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const pkg = require(path.resolve(__dirname, '../package.json'))
 
-const deps = pkg.dependencies ? Object.keys(pkg.dependencies) : []
-const devDeps = pkg.devDependencies ? Object.keys(pkg.devDependencies) : []
+const deps = Object.keys(pkg.dependencies || {})
+const devDeps = Object.keys(pkg.devDependencies || {})
 
 export default {
   build: {
