@@ -23,7 +23,9 @@ export function StoryHeading({ label, heading = 'h2' }: Props) {
         href={`#${slugifiedLabel}`}
         target="_self"
         onClick={() => {
-          if (window.top) window.top.location.hash = slugifiedLabel
+          if (window.top) {
+            window.top.location.hash = slugifiedLabel
+          }
         }}
       >
         {linkIcon}
