@@ -9,6 +9,6 @@
   "scripts": {
     "build": "vite build"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "@adevinta",
+  "license": "MIT"
 }

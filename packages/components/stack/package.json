@@ -1,7 +1,7 @@
 {
     "name": "@ds-name/stack",
     "version": "0.0.0",
-    "description": "Button component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.",
+    "description": "Stack is a layout component used to group elements together and apply a space between them.",
     "main": "./dist/index.mjs",
     "module": "./dist/index.js",
     "source": "./src/index.ts",
@@ -9,6 +9,6 @@
     "scripts": {
         "build": "vite build"
     },
-    "author": "",
-    "license": "ISC"
+    "author": "@adevinta",
+    "license": "MIT"
 }

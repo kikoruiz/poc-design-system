@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef, PropsWithChildren } from 'react'
 
-import { buttonVariants, ButtonVariantsProps } from './variants'
+import { buttonVariants, ButtonVariantsProps } from './Button.variants'
 
 interface Props extends ButtonVariantsProps, ComponentPropsWithoutRef<'button'> {
   className?: string
