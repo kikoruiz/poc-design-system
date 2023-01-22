@@ -1,0 +1,38 @@
+import { ArgsTable, Canvas, Meta, Story, DocsContainer } from '@storybook/addon-docs'
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { ReactLiveBlock } from '@devtools/ReactLiveBlock'
+import { StoryHeading } from '@devtools/StoryHeading'
+
+import { Button } from '../src/'
+
+import * as stories from './Button.stories'
+
+<Meta title="Components/Forms/Button" component={Button} />
+
+# Button
+
+<StoryHeading label="Import" />
+
+```
+import { Button } from "@ds-name/button";
+```
+
+<StoryHeading label="Usage" />
+
+Button component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.
+
+<ReactLiveBlock scope={{ Button }}>
+  <Button>button</Button>
+</ReactLiveBlock>
+
+<StoryHeading label="Props" />
+
+<ArgsTable of={Button} />
+
+<StoryHeading label="Variants" />
+
+<Story name="variants" story={stories.Variants} />
+
+<StoryHeading label="Sizes" />
+
+<Story name="sizes" story={stories.Sizes} />
