@@ -4,7 +4,6 @@
     "description": "Stack is a layout component used to group elements together and apply a space between them.",
     "main": "./dist/index.mjs",
     "module": "./dist/index.js",
-    "source": "./src/index.ts",
     "types": "./dist/index.d.ts",
     "scripts": {
         "build": "vite build"
