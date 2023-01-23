@@ -1,19 +1,16 @@
 {
-    "name": "@ds-name/tabs",
-    "version": "0.0.0",
-    "description": "A React component that helps you build accessible tabs, by providing keyboard interactions and ARIA attributes described in the WAI-ARIA Tab Panel Design Pattern.",
-    "main": "./dist/index.mjs",
-    "module": "./dist/index.js",
-    "types": "./dist/index.d.ts",
-    "scripts": {
-        "build": "vite build"
-    },
-    "files": [
-        "dist"
-    ],
-    "author": "",
-    "license": "ISC",
-    "peerDependencies": {
-        "@radix-ui/react-tabs": "^1.0.1"
-    }
+  "name": "@ds-name/tabs",
+  "version": "0.0.0",
+  "description": "A React component that helps you build accessible tabs, by providing keyboard interactions and ARIA attributes described in the WAI-ARIA Tab Panel Design Pattern.",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "vite build"
+  },
+  "author": "@adevinta",
+  "license": "MIT",
+  "peerDependencies": {
+    "@radix-ui/react-tabs": "1.0.1"
+  }
 }

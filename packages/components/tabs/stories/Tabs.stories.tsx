@@ -24,7 +24,7 @@ const tabs: Tab[] = [
   },
 ]
 
-export const variants = () => (
+export const Variants = () => (
   <ReactLiveBlock scope={{ Tabs }}>
     <Tabs defaultValue="tab1">
       <Tabs.List>

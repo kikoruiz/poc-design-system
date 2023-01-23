@@ -1,0 +1,5 @@
+assets
+src
+CHANGELOG.md
+
+dist/**/*.stories.*
