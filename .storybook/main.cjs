@@ -4,7 +4,7 @@ module.exports = {
   async viteFinal(config, { configType }) {
     return {
       ...config,
-      base: '',
+      base: './',
     }
   },
   stories: ['../documentation/**/*.mdx', '../packages/**/*.stories.@(mdx|ts|tsx)'],
