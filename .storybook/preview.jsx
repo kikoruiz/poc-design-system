@@ -1,4 +1,5 @@
 import { themes } from '../src/themes'
+import Theme from '@s-ui/react-ecosystem-theme'
 
 const themeEntries = Object.entries(themes)
 
@@ -26,5 +27,12 @@ export const decorators = [
     <div style={{ paddingTop: '1rem' }}>
       <Story />
     </div>
+  ),
+  Story => (
+    <Theme
+    //tokens={{ colors: { color: 'darkgreen' } }}
+    >
+      <Story />
+    </Theme>
   ),
 ]
