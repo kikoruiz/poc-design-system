@@ -8,7 +8,9 @@ export const decorators = [
   ),
   Story => (
     <Theme
-    //tokens={{ colors: { color: 'darkgreen' } }}
+      tokens={{
+
+      }}
     >
       <Story />
     </Theme>
