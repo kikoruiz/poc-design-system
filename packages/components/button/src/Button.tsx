@@ -1,3 +1,5 @@
+import './Button.styles.css'
+
 import { ComponentPropsWithoutRef, PropsWithChildren } from 'react'
 
 import { buttonVariants, ButtonVariantsProps } from './Button.variants'

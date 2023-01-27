@@ -1,0 +1,40 @@
+.spark-Stack {
+  display: flex;
+}
+
+.spark-Stack--row {
+  flex-direction: row;
+}
+.spark-Stack--col {
+  flex-direction: column;
+}
+
+.spark-Stack--itemsStart {
+  align-items: flex-start;
+}
+.spark-Stack--itemsCenter {
+  align-items: center;
+}
+.spark-Stack--itemsEnd {
+  align-items: flex-end;
+}
+
+.spark-Stack--justifyStart {
+  justify-content: flex-start;
+}
+.spark-Stack--justifyCenter {
+  justify-content: center;
+}
+.spark-Stack--justifyEnd {
+  justify-content: flex-end;
+}
+
+.spark-Stack--gapSmall {
+  gap: var(--gap-s);
+}
+.spark-Stack--gapMedium {
+  gap: var(--gap-m);
+}
+.spark-Stack--gapLarge {
+  gap: var(--gap-l);
+}

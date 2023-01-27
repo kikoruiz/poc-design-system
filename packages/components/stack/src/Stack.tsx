@@ -1,27 +1,28 @@
+import './Stack.styles.css'
+
 import { cva, VariantProps } from 'class-variance-authority'
 import { ComponentPropsWithoutRef } from 'react'
 
-const stack = cva(['flex'], {
+const stack = cva(['spark-Stack'], {
   variants: {
     flexDirection: {
-      row: ['flex-row'],
-      column: ['flex-col'],
+      row: ['spark-Stack--row'],
+      column: ['spark-Stack--col'],
     },
     alignItems: {
-      start: ['items-start'],
-      center: ['items-center'],
-      end: ['items-end'],
+      start: ['spark-Stack--itemsStart'],
+      center: ['spark-Stack--itemsCenter'],
+      end: ['spark-Stack--itemsEnd'],
     },
     justifyContent: {
-      start: ['justify-start'],
-      center: ['justify-center'],
-      end: ['justify-end'],
+      start: ['spark-Stack--justifyStart'],
+      center: ['spark-Stack--justifyCenter'],
+      end: ['spark-Stack--justifyEnd'],
     },
     gap: {
-      xs: ['gap-xs'],
-      s: ['gap-s'],
-      m: ['gap-m'],
-      l: ['gap-l'],
+      s: ['spark-Stack--gapSmall'],
+      m: ['spark-Stack--gapMedium'],
+      l: ['spark-Stack--gapLarge'],
     },
   },
   defaultVariants: {

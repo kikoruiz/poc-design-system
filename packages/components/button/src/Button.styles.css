@@ -1,0 +1,48 @@
+/* Reset button element */
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+  user-select: none;
+}
+
+button:focus {
+  outline: 0;
+}
+/* Reset button element */
+
+.spark-Button {
+  border-radius: var(--bdrs-l);
+  color: var(--c-white);
+  font-weight: var(--fw-semi-bold);
+  border: var(--bdw-xs) solid transparent;
+}
+
+.spark-Button--primary {
+  background-color: var(--c-primary-500);
+}
+.spark-Button--primary:hover {
+  background-color: var(--c-primary-600);
+}
+
+.spark-Button--secondary {
+  background-color: var(--c-accent-500);
+}
+.spark-Button--secondary:hover {
+  background-color: var(--c-accent-600);
+}
+
+.spark-Button--small {
+  padding: var(--p-xs) var(--p-s);
+  font-size: var(--fz-s);
+}
+.spark-Button--medium {
+  padding: var(--p-s) var(--p-m);
+  font-size: var(--fz-m);
+}
+.spark-Button--large {
+  padding: var(--p-m) var(--p-l);
+  font-size: var(--fz-l);
+}
