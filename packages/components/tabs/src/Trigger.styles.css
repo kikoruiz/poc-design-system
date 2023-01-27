@@ -1,0 +1,31 @@
+.spark-TabsTrigger {
+    flex: 1;
+    padding: var(--p-xs) var(--p-s);
+    border-width: var(--border-width-xs);
+    border-left-width: var(--border-width-none);
+    border-top-color: var(--colors-transparent);
+    border-bottom-width: var(--border-width-xs);
+    --tw-border-opacity: 1;
+        border-bottom-color: rgb(var(--colors-bg-primary-accent) / var(--tw-border-opacity));
+}
+.spark-TabsTrigger:first-child {
+    border-top-right-radius: var(--bdrs-l);
+    border-left: transparent;
+    border-right-width: var(--border-width-xs);
+    border-left-width: var(--border-width-xs);
+ }
+.spark-TabsTrigger:last-child {
+    border-top-right-radius: var(--bdrs-l);
+    border-left: transparent;
+}
+.spark-TabsTrigger.radix-state-active {
+    --tw-border-opacity: 1;
+        border-bottom-color: rgb(var(--colors-fg-cta) / var(--tw-border-opacity));
+    --tw-border-opacity: 1;
+        border-bottom-color: rgb(var(--colors-bd-primary) / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+        background-color: rgb(var(--colors-bg-primary-subtle) / var(--tw-bg-opacity));
+}
+.spark-TabsTrigger.focus-visible.radix-state-active{
+    border-bottom-color: var(--colors-transparent);
+}

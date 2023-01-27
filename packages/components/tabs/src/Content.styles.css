@@ -1,0 +1,8 @@
+.spark-TabsContent {
+    border-bottom-right-radius: var(--bdrs-l);
+    border-bottom-left-radius: var(--bdrs-l);
+    background-color: var(--c-white);
+    padding: var(--p-m);
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
+                0 1px 2px -1px rgb(0 0 0 / 0.1);
+} 

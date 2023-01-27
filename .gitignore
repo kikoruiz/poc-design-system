@@ -23,5 +23,5 @@ buildcache
 *.njsproj
 *.sln
 *.sw?
-
+.vercel
 storybook-static

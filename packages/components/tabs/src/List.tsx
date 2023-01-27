@@ -1,7 +1,7 @@
 import { List, TabsListProps } from '@radix-ui/react-tabs'
 import { cva } from 'class-variance-authority'
 
-export const styles = cva(['flex', 'min-w-full', 'rounded-t-s', 'shadow-normal'])
+export const styles = cva(['spark-TabsList'])
 
 export function TabsList({ children, asChild = false, loop = true, ...rest }: TabsListProps) {
   const defaultRadixValues = {

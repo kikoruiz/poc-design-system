@@ -1,0 +1,8 @@
+.spark-TabsRoot {
+    display: flex;
+    flex-direction: column;
+    border-bottom-right-radius: var(--bdrs-l);
+    border-bottom-left-radius: var(--bdrs-l);
+    background-color: var(--c-white);
+    padding: var(--p-m) var(--p-l);
+} 
