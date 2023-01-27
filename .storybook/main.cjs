@@ -1,8 +1,10 @@
 const path = require('path')
+
 module.exports = {
   async viteFinal(config, { configType }) {
     return {
       ...config,
+      base: '',
     }
   },
   stories: ['../documentation/**/*.mdx', '../packages/**/*.stories.@(mdx|ts|tsx)'],
