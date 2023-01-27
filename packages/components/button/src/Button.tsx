@@ -3,12 +3,10 @@ import { ComponentPropsWithoutRef, PropsWithChildren } from 'react'
 import { buttonVariants, ButtonVariantsProps } from './Button.variants'
 
 interface Props extends ButtonVariantsProps, ComponentPropsWithoutRef<'button'> {
-  className?: string
   disabled?: boolean
 }
 
 export function Button({
-  className,
   color = 'gray',
   children,
   disabled = false,
@@ -24,7 +22,6 @@ export function Button({
         intent,
         size,
         disabled: !!disabled,
-        className,
       })}
       {...buttonHtmlProps}
     >

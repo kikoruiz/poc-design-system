@@ -13,7 +13,7 @@
     "preview": "vite preview",
     "test": "vitest watch",
     "test:run": "vitest run",
-    "start": "npm run write-tailwind-conf && npm run write-themes && npm run storybook",
+    "start": "npm run storybook",
     "storybook:build": "storybook build",
     "storybook:upgrade": "storybook upgrade --prerelease",
     "storybook": "storybook dev -p 6006",
@@ -21,8 +21,6 @@
     "lint-staged": "lint-staged --config .lintstagedrc.json",
     "prettier": "prettier --config .prettierrc.json --write \"{packages,src}/**/*.{ts,tsx}\"",
     "typecheck": "tsc",
-    "write-themes": "ts-node-esm themeConfig/writeThemes.ts",
-    "write-tailwind-conf": "ts-node-esm themeConfig/writeTailwindConfig.ts",
     "postinstall": "husky install"
   },
   "devDependencies": {

@@ -3,16 +3,16 @@ import { cva, VariantProps } from 'class-variance-authority'
 export const buttonVariants = cva(['spark-Button'], {
   variants: {
     disabled: {
-      true: ['opacity-50', 'cursor-not-allowed'],
+      true: ['is-disabled'],
     },
     intent: {
-      primary: ['bg-bg-primary', 'text-fg-cta', 'hover:bg-bg-primary-subtle'],
-      secondary: ['bg-bg-secondary', 'text-main-text', 'hover:bg-bg-secondary-subtle'],
+      primary: ['spark-Button--primary'],
+      secondary: ['spark-Button--secondary'],
     },
     size: {
-      small: ['text-s', 'px-s', 'py-xs'],
-      medium: ['text-m', 'px-m', 'py-s'],
-      large: ['text-l', 'px-l', 'py-m'],
+      small: ['spark-Button--small'],
+      medium: ['spark-Button--medium'],
+      large: ['spark-Button--large'],
     },
   },
   defaultVariants: {
@@ -24,9 +24,9 @@ export const buttonVariants = cva(['spark-Button'], {
       intent: 'primary',
       size: 'small',
       disabled: true,
-      className: 'border-4 border-pink-500',
+      className: 'spark-Button--variantOne',
     },
   ],
 })
 
-export type ButtonVariantsProps = VariantProps<typeof buttonVariants> // & { intent: string } <- to mark a prop as required
+export type ButtonVariantsProps = VariantProps<typeof buttonVariants>
