@@ -9,7 +9,13 @@ export const decorators = [
   Story => (
     <Theme
       tokens={{
-
+        typography: {
+          fontSize: { base: 'calc(var(--sz-base) * 2)' },
+        },
+        size: {
+          padding: { base: 'calc(var(--sz-base) * 4)' },
+          borderRadius: { base: 'calc(var(--sz-base) * 2)' }
+        },
       }}
     >
       <Story />
