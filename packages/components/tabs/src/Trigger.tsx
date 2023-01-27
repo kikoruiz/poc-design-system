@@ -14,7 +14,7 @@ export function TabsTrigger({ children, asChild = false, disabled = false, ...re
   }
 
   return (
-    <Trigger className="bg-bg-primary-subtle" {...defaultRadixValues} {...rest}>
+    <Trigger className={styles()} {...defaultRadixValues} {...rest}>
       {children}
     </Trigger>
   )
