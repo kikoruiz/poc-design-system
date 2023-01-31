@@ -1,3 +1,5 @@
+import './Content.styles.css'
+
 import { Content, TabsContentProps } from '@radix-ui/react-tabs'
 import { cva } from 'class-variance-authority'
 

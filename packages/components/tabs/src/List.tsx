@@ -1,3 +1,5 @@
+import './List.styles.css'
+
 import { List, TabsListProps } from '@radix-ui/react-tabs'
 import { cva } from 'class-variance-authority'
 

@@ -1,3 +1,5 @@
+import './Trigger.styles.css'
+
 import { TabsTriggerProps, Trigger } from '@radix-ui/react-tabs'
 import { cva } from 'class-variance-authority'
 
